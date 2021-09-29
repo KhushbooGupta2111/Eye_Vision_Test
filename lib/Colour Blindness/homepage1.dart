@@ -44,7 +44,7 @@ class _CbHomePageState extends State<CbHomePage> {
                                     colors: [Colors.white, Colors.cyan])),
                           )),
                       Image.asset(
-                        'assets/images/color.PNG',
+                        'assets/images/color.png',
                         width: 170,
                         height: 170,
                       ),

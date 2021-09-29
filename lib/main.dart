@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'Colour Blindness/homepage1.dart';
 import 'visual acuity/instructions.dart';

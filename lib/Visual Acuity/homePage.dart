@@ -1,4 +1,4 @@
-import 'package:eye_vision/Visual%20Acuity/instructions.dart';
+import 'package:eye_vision/Visual Acuity/instructions.dart';
 import 'package:flutter/material.dart';
 
 class VsHomePage extends StatefulWidget {
