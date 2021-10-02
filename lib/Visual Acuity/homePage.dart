@@ -59,7 +59,7 @@ class _VsHomePageState extends State<VsHomePage> {
                             fontFamily: 'Playfair Display SC',
                             fontSize: 40,
                             color: Colors.white,
-                          )))),
+                          ),),),),
               Container(
                 height: 8,
                 width: 130,
