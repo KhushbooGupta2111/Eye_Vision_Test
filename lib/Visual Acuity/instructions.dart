@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:eye_vision/Visual Acuity/quiz_questions.dart';
+
+import 'left_eye_screen.dart';
 
 void main() {
   runApp(Instructions());
@@ -63,7 +64,7 @@ class Instructions extends StatelessWidget {
                       fontSize: 25.0,
                     )),
                 onPressed: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => VsQuestions())),
+                    MaterialPageRoute(builder: (context) => CloseEyeLeft())),
               ),
             ],
           )),
