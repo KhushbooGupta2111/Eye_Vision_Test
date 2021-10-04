@@ -21,7 +21,7 @@ class _FinalResultState extends State<FinalResult> {
         children: <Widget>[
           Center(
             child: Container(
-                margin: EdgeInsets.only(top: 40),
+                margin: EdgeInsets.only(top: 41),
                 child: Text("VISUAL ACUITY RESULT",
                     style: TextStyle(
                       color: Colors.white,
