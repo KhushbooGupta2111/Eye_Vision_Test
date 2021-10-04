@@ -1,8 +1,16 @@
+import 'package:eye_vision/provider/getalpha.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'Colour Blindness/homepage1.dart';
+import 'provider/getquestions.dart';
 import 'visual acuity/instructions.dart';
+import 'eye health/main_screen.dart';
+import 'Visual Acuity/quiz_questions.dart';
 import 'visual acuity/homepage.dart';
+import 'package:bottom_animation/bottom_animation.dart';
+import 'Visual Acuity/options.dart';
 
 void main() {
   runApp(HomePage());
@@ -20,13 +28,19 @@ class _HomePageState extends State<HomePage> {
   final screens = [
     VsHomePage(),
     CbHomePage(),
-    Instructions(),
+    MainScreen(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        
+        ChangeNotifierProvider<Alphabets>(
+          create: (_) => Alphabets(),
+        ),
+        ChangeNotifierProvider<Questions>(
+          create: (_) => Questions(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
