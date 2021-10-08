@@ -1,43 +1,57 @@
 import 'package:flutter/material.dart';
 
-class Question1 extends StatefulWidget {
-  const Question1({Key? key}) : super(key: key);
+class CbQuestions extends StatefulWidget {
+  const CbQuestions({Key? key}) : super(key: key);
 
   @override
-  _Question1State createState() => _Question1State();
+  CbQuestionsState createState() => CbQuestionsState();
 }
 
-class _Question1State extends State<Question1> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        height: 300,
-        width: 300,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/images/Ishihara1.png'),
-              fit: BoxFit.cover),
-        ));
-  }
-}
-
-class Question2 extends StatefulWidget {
-  const Question2({Key? key}) : super(key: key);
-
-  @override
-  _Question2State createState() => _Question2State();
-}
-
-class _Question2State extends State<Question1> {
+class CbQuestionsState extends State<CbQuestions> {
+  List images = [
+    "assets/images/Ishihara1.png",
+    "assets/images/Ishihara2.png",
+    "assets/images/Ishihara3.png",
+    "assets/images/Ishihara4.png",
+    "assets/images/Ishihara5.png",
+    "assets/images/Ishihara6.png",
+    "assets/images/Ishihara7.png",
+    "assets/images/Ishihara8.png",
+    "assets/images/Ishihara9.png",
+    "assets/images/Ishihara10.png"
+  ];
   @override
   Widget build(BuildContext context) {
-    return Container(
-        height: 300,
-        width: 300,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/images/Ishihara1.png'),
-              fit: BoxFit.cover),
-        ));
+    //Widget Images(List<String> image) {
+    for (int i = 0; i <= 9; i++)
+      return Scaffold(
+          body: SafeArea(
+        child: Column(children: <Widget>[
+          Center(
+            child: Container(
+                margin: EdgeInsets.only(top: 30),
+                height: 250,
+                width: 250,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("images[i]"), fit: BoxFit.cover),
+                )),
+          ),
+          Center(
+            child: Container(
+                width: 200,
+                height: 80,
+                margin: EdgeInsets.only(top: 15),
+                child: TextField(
+                  decoration: InputDecoration(
+                      hintText: 'Enter the number',
+                      hintStyle: TextStyle(
+                        fontSize: 20,
+                      )),
+                )),
+          )
+        ]),
+      ));
   }
 }
+//}
